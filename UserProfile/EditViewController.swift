@@ -10,24 +10,40 @@ import UIKit
 
 class EditViewController: UIViewController {
 
-    @IBOutlet weak var textFieldFirstName: UITextField!
-    @IBOutlet weak var textFieldLastName: UITextField!
-    @IBOutlet weak var switchAge: UISwitch!
-    
+    var firstName : String = ""
+    var lastName : String = ""
+    var ageMore50 = false
+
+    @IBOutlet private weak var textFieldFirstName: UITextField!
+    @IBOutlet private weak var textFieldLastName: UITextField!
+    @IBOutlet private weak var switchAge: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.textFieldFirstName.text = self.firstName
+        self.textFieldLastName.text = self.lastName
+        self.switchAge.isOn = self.ageMore50
     }
 
-    @IBAction func textFieldFirstName(_ sender: UITextField) {
+    @IBAction private func buttonEditOk(_ sender: UIButton) {
+
+        if let tmp = self.textFieldFirstName.text {
+            self.firstName = tmp
+        }
+        if let tmp = self.textFieldLastName.text {
+            self.lastName = tmp
+        }
+        self.ageMore50 = self.switchAge.isOn
     }
 
-    @IBAction func textFieldLastName(_ sender: UITextField) {
+    @IBAction private func switchAge(_ sender: UISwitch) {
     }
 
-    @IBAction func switchAge(_ sender: UISwitch) {
-    }
-    
-    @IBAction func buttonClear(_ sender: UIButton) {
+    @IBAction private func buttonClear(_ sender: UIButton) {
+        self.textFieldFirstName.text = ""
+        self.textFieldLastName.text = ""
+        self.switchAge.isOn = false
     }
 }
+
+

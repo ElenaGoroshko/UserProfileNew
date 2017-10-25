@@ -70,7 +70,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Byq-h2-Pcc" kind="show" id="JAC-YL-5O1"/>
+                                    <segue destination="Byq-h2-Pcc" kind="show" identifier="showEditScreenSegue" id="JAC-YL-5O1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,6 +78,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="41r-vn-fhs"/>
+                    <connections>
+                        <outlet property="labelFirstName" destination="498-Qh-MfO" id="BsV-jY-zM9"/>
+                        <outlet property="labelLastName" destination="F7J-hz-wCt" id="oGL-jm-Kk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,9 +115,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textFieldLastName:" destination="Byq-h2-Pcc" eventType="editingDidEnd" id="LLx-JS-K1Z"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q5F-vb-w5k">
                                 <rect key="frame" x="139" y="144" width="220" height="30"/>
@@ -121,9 +122,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="textFieldFirstName:" destination="Byq-h2-Pcc" eventType="editingDidEnd" id="tV8-bM-Fhb"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Старше 50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-hK-Y3X">
                                 <rect key="frame" x="34" y="251" width="105" height="25"/>
@@ -147,6 +145,10 @@
                                 <state key="normal" title="Подтвердить">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonEditOk:" destination="Byq-h2-Pcc" eventType="touchUpInside" id="hhO-p6-z5w"/>
+                                    <segue destination="DWH-PN-K4T" kind="unwind" identifier="showProfileFromEdit" unwindAction="backToProfileScreenWithSender:" id="HEG-Tj-O9n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsk-Ae-Pte">
                                 <rect key="frame" x="112" y="410" width="151" height="39"/>
@@ -173,11 +175,12 @@
                     </view>
                     <connections>
                         <outlet property="switchAge" destination="gcA-Da-gRw" id="Yuv-JI-Jyy"/>
-                        <outlet property="textFieldFirstName" destination="Q5F-vb-w5k" id="iMV-fH-LmF"/>
+                        <outlet property="textFieldFirstName" destination="Q5F-vb-w5k" id="zlY-2O-tMz"/>
                         <outlet property="textFieldLastName" destination="0ye-xE-2kq" id="eEo-LR-Bg8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwR-lh-zRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DWH-PN-K4T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="661.60000000000002" y="311.69415292353824"/>
         </scene>
