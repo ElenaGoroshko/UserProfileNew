@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5758C81FA0C22400BD58F6 /* EditNameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5758C71FA0C22400BD58F6 /* EditNameDelegate.swift */; };
 		9BDBD25A1F9FA95C00CBC250 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBD2591F9FA95C00CBC250 /* AppDelegate.swift */; };
 		9BDBD25F1F9FA95C00CBC250 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD25D1F9FA95C00CBC250 /* Main.storyboard */; };
 		9BDBD2611F9FA95C00CBC250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDBD2601F9FA95C00CBC250 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B5758C71FA0C22400BD58F6 /* EditNameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameDelegate.swift; sourceTree = "<group>"; };
 		9BDBD2561F9FA95C00CBC250 /* UserProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDBD2591F9FA95C00CBC250 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BDBD25E1F9FA95C00CBC250 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				9BDBD26B1F9FAAD100CBC250 /* ProfileViewController.swift */,
 				9BDBD26D1F9FAC4D00CBC250 /* EditViewController.swift */,
+				9B5758C71FA0C22400BD58F6 /* EditNameDelegate.swift */,
 				9BDBD2591F9FA95C00CBC250 /* AppDelegate.swift */,
 				9BDBD25D1F9FA95C00CBC250 /* Main.storyboard */,
 				9BDBD2601F9FA95C00CBC250 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 				9BDBD26C1F9FAAD100CBC250 /* ProfileViewController.swift in Sources */,
 				9BDBD25A1F9FA95C00CBC250 /* AppDelegate.swift in Sources */,
 				9BDBD26E1F9FAC4D00CBC250 /* EditViewController.swift in Sources */,
+				9B5758C81FA0C22400BD58F6 /* EditNameDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

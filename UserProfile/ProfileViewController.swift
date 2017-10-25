@@ -25,16 +25,6 @@ class ProfileViewController: UIViewController {
 
     }
 
-    @IBAction func backToProfileScreen(sender: UIStoryboardSegue){
-
-        if let dest = sender.source as? EditViewController  {
-            self.ageMore50 = dest.ageMore50
-            self.firstName = dest.firstName
-            self.lastName = dest.lastName
-            self.labelFirstName.text = self.firstName
-            self.labelLastName.text = self.lastName
-        }
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEditScreenSegue",
@@ -42,8 +32,20 @@ class ProfileViewController: UIViewController {
                 dest.ageMore50 = self.ageMore50
                 dest.firstName = self.firstName
                 dest.lastName = self.lastName
+                dest.delegate = self
         }
-    }
 
+    }
+}
+
+extension ProfileViewController : EditNameDelegate {
+
+    func EditName(firstName: String, lastName: String, ageMore50: Bool) {
+        self.ageMore50 = ageMore50
+        self.firstName = firstName
+        self.lastName = lastName
+        self.labelFirstName.text = self.firstName
+        self.labelLastName.text = self.lastName
+    }
 
 }
