@@ -10,5 +10,7 @@ import UIKit
 
 protocol EditNameDelegate {
     
-    func EditName(firstName : String, lastName : String, ageMore50 : Bool)
+    func  editName(firstName : String, lastName : String, ageMore50 : Bool)
+
+    func userDidResetInfo()
 }

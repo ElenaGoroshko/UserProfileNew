@@ -45,7 +45,7 @@ class EditViewController: UIViewController {
             self.labelHello.text = "Привет, \(fName) !"
         }
 
-        delegate?.EditName(firstName: fName, lastName: lName, ageMore50: age)
+        delegate?.editName(firstName: fName, lastName: lName, ageMore50: age)
 
         navigationController?.popViewController(animated: true)
     }
@@ -55,6 +55,8 @@ class EditViewController: UIViewController {
         self.textFieldLastName.text = ""
         self.switchAge.isOn = false
         self.labelHello.text = ""
+
+        delegate?.userDidResetInfo()
 
     }
 }

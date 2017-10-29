@@ -40,10 +40,18 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController : EditNameDelegate {
 
-    func EditName(firstName: String, lastName: String, ageMore50: Bool) {
+    func editName(firstName: String, lastName: String, ageMore50: Bool) {
         self.ageMore50 = ageMore50
         self.firstName = firstName
         self.lastName = lastName
+        self.labelFirstName.text = self.firstName
+        self.labelLastName.text = self.lastName
+    }
+
+    func userDidResetInfo(){
+        self.ageMore50 = false
+        self.firstName = ""
+        self.lastName = ""
         self.labelFirstName.text = self.firstName
         self.labelLastName.text = self.lastName
     }
